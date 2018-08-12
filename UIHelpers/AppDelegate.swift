@@ -9,4 +9,10 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {}
+class AppDelegate: UIResponder, UIApplicationDelegate {
+    private let window = UIWindow(frame: UIScreen.main.bounds)
+    func applicationDidFinishLaunching(_ application: UIApplication) {
+        window.rootViewController = ViewController(nibName: nil, bundle: nil)
+        window.makeKeyAndVisible()
+    }
+}

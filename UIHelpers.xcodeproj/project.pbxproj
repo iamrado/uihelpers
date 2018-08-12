@@ -10,6 +10,14 @@
 		1A0FD53F211F157D0005F4AC /* UIImageScaleHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD53E211F157D0005F4AC /* UIImageScaleHelperTests.swift */; };
 		1A0FD544211F324A0005F4AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0FD543211F324A0005F4AC /* AVFoundation.framework */; };
 		1A0FD546211F34C50005F4AC /* UIViewControllerHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD545211F34C50005F4AC /* UIViewControllerHelperTests.swift */; };
+		1A0FD54C21206DE80005F4AC /* ViewStatePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD54B21206DE80005F4AC /* ViewStatePresenter.swift */; };
+		1A0FD54E21206FED0005F4AC /* ViewStatePresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD54D21206FED0005F4AC /* ViewStatePresentable.swift */; };
+		1A0FD550212079E80005F4AC /* StateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD54F212079E80005F4AC /* StateView.swift */; };
+		1A0FD5522120895E0005F4AC /* StateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FD5512120895E0005F4AC /* StateView.xib */; };
+		1A0FD5542120927E0005F4AC /* ActivityStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD5532120927E0005F4AC /* ActivityStateView.swift */; };
+		1A0FD556212092910005F4AC /* ActivityStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FD555212092910005F4AC /* ActivityStateView.xib */; };
+		1A0FD55A212097FC0005F4AC /* ViewStatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD559212097FC0005F4AC /* ViewStatePresenterTests.swift */; };
+		1A0FD55D21209B210005F4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD55C21209B210005F4AC /* ViewController.swift */; };
 		1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */; };
 		1A10A136205F9E3B00B98FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10A135205F9E3B00B98FBA /* Assets.xcassets */; };
 		1A10A139205F9E3B00B98FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A10A137205F9E3B00B98FBA /* LaunchScreen.storyboard */; };
@@ -33,6 +41,14 @@
 		1A0FD53E211F157D0005F4AC /* UIImageScaleHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageScaleHelperTests.swift; sourceTree = "<group>"; };
 		1A0FD543211F324A0005F4AC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1A0FD545211F34C50005F4AC /* UIViewControllerHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelperTests.swift; sourceTree = "<group>"; };
+		1A0FD54B21206DE80005F4AC /* ViewStatePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatePresenter.swift; sourceTree = "<group>"; };
+		1A0FD54D21206FED0005F4AC /* ViewStatePresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatePresentable.swift; sourceTree = "<group>"; };
+		1A0FD54F212079E80005F4AC /* StateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateView.swift; sourceTree = "<group>"; };
+		1A0FD5512120895E0005F4AC /* StateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateView.xib; sourceTree = "<group>"; };
+		1A0FD5532120927E0005F4AC /* ActivityStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStateView.swift; sourceTree = "<group>"; };
+		1A0FD555212092910005F4AC /* ActivityStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityStateView.xib; sourceTree = "<group>"; };
+		1A0FD559212097FC0005F4AC /* ViewStatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatePresenterTests.swift; sourceTree = "<group>"; };
+		1A0FD55C21209B210005F4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		1A10A12B205F9E3A00B98FBA /* UIHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A10A135205F9E3B00B98FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +89,44 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1A0FD54A21206DBD0005F4AC /* ViewStatePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FD54B21206DE80005F4AC /* ViewStatePresenter.swift */,
+				1A0FD54D21206FED0005F4AC /* ViewStatePresentable.swift */,
+				1A0FD54F212079E80005F4AC /* StateView.swift */,
+				1A0FD5512120895E0005F4AC /* StateView.xib */,
+				1A0FD5532120927E0005F4AC /* ActivityStateView.swift */,
+				1A0FD555212092910005F4AC /* ActivityStateView.xib */,
+			);
+			path = ViewStatePresenter;
+			sourceTree = "<group>";
+		};
+		1A0FD557212097D80005F4AC /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FD53E211F157D0005F4AC /* UIImageScaleHelperTests.swift */,
+				1A0FD545211F34C50005F4AC /* UIViewControllerHelperTests.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1A0FD558212097E10005F4AC /* ViewStatePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FD559212097FC0005F4AC /* ViewStatePresenterTests.swift */,
+			);
+			path = ViewStatePresenter;
+			sourceTree = "<group>";
+		};
+		1A0FD55B21209B050005F4AC /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FD55C21209B210005F4AC /* ViewController.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
 		1A10A122205F9E3A00B98FBA = {
 			isa = PBXGroup;
 			children = (
@@ -95,11 +149,13 @@
 		1A10A12D205F9E3A00B98FBA /* UIHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				1A0FD55B21209B050005F4AC /* Demo */,
 				1A10A146205FB10000B98FBA /* Helpers */,
+				1A0FD54A21206DBD0005F4AC /* ViewStatePresenter */,
 				1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */,
 				1A10A135205F9E3B00B98FBA /* Assets.xcassets */,
-				1A10A137205F9E3B00B98FBA /* LaunchScreen.storyboard */,
 				1A10A13A205F9E3B00B98FBA /* Info.plist */,
+				1A10A137205F9E3B00B98FBA /* LaunchScreen.storyboard */,
 			);
 			path = UIHelpers;
 			sourceTree = "<group>";
@@ -134,9 +190,9 @@
 		1ADA531C211F15370018D0D7 /* UIHelpersTests */ = {
 			isa = PBXGroup;
 			children = (
+				1A0FD558212097E10005F4AC /* ViewStatePresenter */,
+				1A0FD557212097D80005F4AC /* Helpers */,
 				1ADA531F211F15370018D0D7 /* Info.plist */,
-				1A0FD53E211F157D0005F4AC /* UIImageScaleHelperTests.swift */,
-				1A0FD545211F34C50005F4AC /* UIViewControllerHelperTests.swift */,
 			);
 			path = UIHelpersTests;
 			sourceTree = "<group>";
@@ -226,8 +282,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0FD5522120895E0005F4AC /* StateView.xib in Resources */,
 				1A10A139205F9E3B00B98FBA /* LaunchScreen.storyboard in Resources */,
 				1A10A136205F9E3B00B98FBA /* Assets.xcassets in Resources */,
+				1A0FD556212092910005F4AC /* ActivityStateView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,11 +303,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0FD55D21209B210005F4AC /* ViewController.swift in Sources */,
 				1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */,
+				1A0FD54E21206FED0005F4AC /* ViewStatePresentable.swift in Sources */,
+				1A0FD550212079E80005F4AC /* StateView.swift in Sources */,
+				1A0FD5542120927E0005F4AC /* ActivityStateView.swift in Sources */,
 				1A10A142205F9EB700B98FBA /* UIImageDrawHelper.swift in Sources */,
 				1ADA5303211F007C0018D0D7 /* UIViewControllerStoryboardHelper.swift in Sources */,
 				1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */,
 				1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */,
+				1A0FD54C21206DE80005F4AC /* ViewStatePresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A0FD546211F34C50005F4AC /* UIViewControllerHelperTests.swift in Sources */,
+				1A0FD55A212097FC0005F4AC /* ViewStatePresenterTests.swift in Sources */,
 				1A0FD53F211F157D0005F4AC /* UIImageScaleHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
