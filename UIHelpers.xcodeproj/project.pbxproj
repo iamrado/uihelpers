@@ -20,6 +20,7 @@
 		1A0FD55D21209B210005F4AC /* ViewStatePresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD55C21209B210005F4AC /* ViewStatePresenterViewController.swift */; };
 		1A0FD55F21221B8E0005F4AC /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */; };
 		1A0FD56221221D150005F4AC /* DemoItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD56121221D150005F4AC /* DemoItemsFactory.swift */; };
+		1A0FD568212230AB0005F4AC /* UIViewNibHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD567212230AB0005F4AC /* UIViewNibHelper.swift */; };
 		1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */; };
 		1A10A136205F9E3B00B98FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10A135205F9E3B00B98FBA /* Assets.xcassets */; };
 		1A10A139205F9E3B00B98FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A10A137205F9E3B00B98FBA /* LaunchScreen.storyboard */; };
@@ -53,6 +54,7 @@
 		1A0FD55C21209B210005F4AC /* ViewStatePresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatePresenterViewController.swift; sourceTree = "<group>"; };
 		1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
 		1A0FD56121221D150005F4AC /* DemoItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoItemsFactory.swift; sourceTree = "<group>"; };
+		1A0FD567212230AB0005F4AC /* UIViewNibHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewNibHelper.swift; sourceTree = "<group>"; };
 		1A10A12B205F9E3A00B98FBA /* UIHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A10A135205F9E3B00B98FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = ViewStatePresenter;
 			sourceTree = "<group>";
 		};
+		1A0FD5632122304D0005F4AC /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FD567212230AB0005F4AC /* UIViewNibHelper.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
 		1A10A122205F9E3A00B98FBA = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +187,7 @@
 		1A10A146205FB10000B98FBA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1A0FD5632122304D0005F4AC /* UIView */,
 				1ADA5302211EFE000018D0D7 /* UIViewController */,
 				1ADA5301211EFDF50018D0D7 /* UIImage */,
 			);
@@ -327,6 +338,7 @@
 				1ADA5303211F007C0018D0D7 /* UIViewControllerStoryboardHelper.swift in Sources */,
 				1A0FD56221221D150005F4AC /* DemoItemsFactory.swift in Sources */,
 				1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */,
+				1A0FD568212230AB0005F4AC /* UIViewNibHelper.swift in Sources */,
 				1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */,
 				1A0FD54C21206DE80005F4AC /* ViewStatePresenter.swift in Sources */,
 			);
