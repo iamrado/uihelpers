@@ -56,6 +56,7 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="activityIndicator" destination="5EK-eG-iJR" id="oyX-B2-Zga"/>
+                <outlet property="activityStackView" destination="YMP-uP-uqq" id="wHZ-l9-UQh"/>
                 <outlet property="button" destination="iXs-aU-XrT" id="Y5Y-Fq-nRz"/>
                 <outlet property="titleLabel" destination="XAc-W4-ZBL" id="BFa-9s-brA"/>
             </connections>

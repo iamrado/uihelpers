@@ -57,12 +57,14 @@ final class ViewStatePresenter {
     func present(state: ViewStatePresenter.State?, info: ViewStatePresenter.Info?) {
         presentedView?.removeFromSuperview()
         guard let state = state, let viewClass = viewStateClasses[state] else { return }
+
         var view = viewClass.instantiate()
         view.title = info?.title
         view.subtitle = info?.subtitle
         view.image = info?.img
         view.buttonTitle = info?.action?.title
         view.onButtonTapped = info?.action?.block
+
         presentedView = view
         layoutStateView(view)
     }

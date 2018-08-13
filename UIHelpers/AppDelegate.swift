@@ -11,8 +11,11 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     private let window = UIWindow(frame: UIScreen.main.bounds)
+
     func applicationDidFinishLaunching(_ application: UIApplication) {
-        window.rootViewController = ViewController(nibName: nil, bundle: nil)
+        let demoViewController = DemoTableViewController(style: .plain)
+        demoViewController.title = "Demo"
+        window.rootViewController = UINavigationController(rootViewController: demoViewController)
         window.makeKeyAndVisible()
     }
 }

@@ -12,10 +12,17 @@ final class ActivityStateView: UIView, ViewStatePresentable {
     @IBOutlet dynamic weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet dynamic weak var titleLabel: UILabel!
     @IBOutlet weak var button: UIButton!
+    @IBOutlet weak var activityStackView: UIStackView!
 
     var title: String? {
         didSet {
             titleLabel.text = title
+
+            if title?.count ?? 0 == 0 {
+                titleLabel.removeFromSuperview()
+            } else {
+                activityStackView.addArrangedSubview(titleLabel)
+            }
         }
     }
     var buttonTitle: String? {

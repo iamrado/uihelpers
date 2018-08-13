@@ -17,7 +17,9 @@
 		1A0FD5542120927E0005F4AC /* ActivityStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD5532120927E0005F4AC /* ActivityStateView.swift */; };
 		1A0FD556212092910005F4AC /* ActivityStateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A0FD555212092910005F4AC /* ActivityStateView.xib */; };
 		1A0FD55A212097FC0005F4AC /* ViewStatePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD559212097FC0005F4AC /* ViewStatePresenterTests.swift */; };
-		1A0FD55D21209B210005F4AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD55C21209B210005F4AC /* ViewController.swift */; };
+		1A0FD55D21209B210005F4AC /* ViewStatePresenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD55C21209B210005F4AC /* ViewStatePresenterViewController.swift */; };
+		1A0FD55F21221B8E0005F4AC /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */; };
+		1A0FD56221221D150005F4AC /* DemoItemsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD56121221D150005F4AC /* DemoItemsFactory.swift */; };
 		1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */; };
 		1A10A136205F9E3B00B98FBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A10A135205F9E3B00B98FBA /* Assets.xcassets */; };
 		1A10A139205F9E3B00B98FBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A10A137205F9E3B00B98FBA /* LaunchScreen.storyboard */; };
@@ -48,7 +50,9 @@
 		1A0FD5532120927E0005F4AC /* ActivityStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityStateView.swift; sourceTree = "<group>"; };
 		1A0FD555212092910005F4AC /* ActivityStateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActivityStateView.xib; sourceTree = "<group>"; };
 		1A0FD559212097FC0005F4AC /* ViewStatePresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatePresenterTests.swift; sourceTree = "<group>"; };
-		1A0FD55C21209B210005F4AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1A0FD55C21209B210005F4AC /* ViewStatePresenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewStatePresenterViewController.swift; sourceTree = "<group>"; };
+		1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
+		1A0FD56121221D150005F4AC /* DemoItemsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoItemsFactory.swift; sourceTree = "<group>"; };
 		1A10A12B205F9E3A00B98FBA /* UIHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A10A135205F9E3B00B98FBA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -122,9 +126,19 @@
 		1A0FD55B21209B050005F4AC /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				1A0FD55C21209B210005F4AC /* ViewController.swift */,
+				1A0FD56021221CBF0005F4AC /* ViewStatePresenter */,
+				1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */,
+				1A0FD56121221D150005F4AC /* DemoItemsFactory.swift */,
 			);
 			path = Demo;
+			sourceTree = "<group>";
+		};
+		1A0FD56021221CBF0005F4AC /* ViewStatePresenter */ = {
+			isa = PBXGroup;
+			children = (
+				1A0FD55C21209B210005F4AC /* ViewStatePresenterViewController.swift */,
+			);
+			path = ViewStatePresenter;
 			sourceTree = "<group>";
 		};
 		1A10A122205F9E3A00B98FBA = {
@@ -303,13 +317,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A0FD55D21209B210005F4AC /* ViewController.swift in Sources */,
+				1A0FD55D21209B210005F4AC /* ViewStatePresenterViewController.swift in Sources */,
 				1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */,
 				1A0FD54E21206FED0005F4AC /* ViewStatePresentable.swift in Sources */,
+				1A0FD55F21221B8E0005F4AC /* DemoTableViewController.swift in Sources */,
 				1A0FD550212079E80005F4AC /* StateView.swift in Sources */,
 				1A0FD5542120927E0005F4AC /* ActivityStateView.swift in Sources */,
 				1A10A142205F9EB700B98FBA /* UIImageDrawHelper.swift in Sources */,
 				1ADA5303211F007C0018D0D7 /* UIViewControllerStoryboardHelper.swift in Sources */,
+				1A0FD56221221D150005F4AC /* DemoItemsFactory.swift in Sources */,
 				1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */,
 				1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */,
 				1A0FD54C21206DE80005F4AC /* ViewStatePresenter.swift in Sources */,
