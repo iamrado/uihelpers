@@ -74,9 +74,7 @@ class ViewStatePresenterViewController: UIViewController {
         let segControl = UISegmentedControl(items: states.map { $0.rawValue.capitalized })
         segControl.addTarget(self, action: #selector(segmentChanged(sender:)), for: .valueChanged)
         segControl.selectedSegmentIndex = states.firstIndex(of: initialState) ?? 0
-
-        navigationController?.isToolbarHidden = false
-        toolbarItems = [UIBarButtonItem(customView: segControl)]
+        setToolbarItems([UIBarButtonItem(customView: segControl)], animated: true)
     }
 
     @objc private func segmentChanged(sender: UISegmentedControl) {

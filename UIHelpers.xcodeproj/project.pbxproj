@@ -27,6 +27,9 @@
 		1A10A142205F9EB700B98FBA /* UIImageDrawHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A141205F9EB700B98FBA /* UIImageDrawHelper.swift */; };
 		1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A144205FAC3200B98FBA /* UIViewControllerHelper.swift */; };
 		1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A14C205FB6F900B98FBA /* UIImageScaleHelper.swift */; };
+		1AA5519A2124C4A000953CED /* KeyboardNotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */; };
+		1AA5519C2124C9BC00953CED /* KeyboardInsetsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */; };
+		1AA551A12124CF4700953CED /* KeyboardInsetsHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */; };
 		1ADA5303211F007C0018D0D7 /* UIViewControllerStoryboardHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA52FF211EFDE70018D0D7 /* UIViewControllerStoryboardHelper.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,9 @@
 		1A10A141205F9EB700B98FBA /* UIImageDrawHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageDrawHelper.swift; sourceTree = "<group>"; };
 		1A10A144205FAC3200B98FBA /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		1A10A14C205FB6F900B98FBA /* UIImageScaleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageScaleHelper.swift; sourceTree = "<group>"; };
+		1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationInfo.swift; sourceTree = "<group>"; };
+		1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInsetsHandler.swift; sourceTree = "<group>"; };
+		1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInsetsHandlerViewController.swift; sourceTree = "<group>"; };
 		1ADA52FF211EFDE70018D0D7 /* UIViewControllerStoryboardHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerStoryboardHelper.swift; sourceTree = "<group>"; };
 		1ADA531B211F15370018D0D7 /* UIHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UIHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA531F211F15370018D0D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -128,6 +134,7 @@
 		1A0FD55B21209B050005F4AC /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1AA5519F2124CF2300953CED /* KeyboardInsetsHandler */,
 				1A0FD56021221CBF0005F4AC /* ViewStatePresenter */,
 				1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */,
 				1A0FD56121221D150005F4AC /* DemoItemsFactory.swift */,
@@ -187,11 +194,29 @@
 		1A10A146205FB10000B98FBA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1AA551982124C48300953CED /* Keyboard */,
 				1A0FD5632122304D0005F4AC /* UIView */,
 				1ADA5302211EFE000018D0D7 /* UIViewController */,
 				1ADA5301211EFDF50018D0D7 /* UIImage */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1AA551982124C48300953CED /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */,
+				1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */,
+			);
+			path = Keyboard;
+			sourceTree = "<group>";
+		};
+		1AA5519F2124CF2300953CED /* KeyboardInsetsHandler */ = {
+			isa = PBXGroup;
+			children = (
+				1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */,
+			);
+			path = KeyboardInsetsHandler;
 			sourceTree = "<group>";
 		};
 		1ADA5301211EFDF50018D0D7 /* UIImage */ = {
@@ -334,11 +359,14 @@
 				1A0FD55F21221B8E0005F4AC /* DemoTableViewController.swift in Sources */,
 				1A0FD550212079E80005F4AC /* StateView.swift in Sources */,
 				1A0FD5542120927E0005F4AC /* ActivityStateView.swift in Sources */,
+				1AA5519C2124C9BC00953CED /* KeyboardInsetsHandler.swift in Sources */,
 				1A10A142205F9EB700B98FBA /* UIImageDrawHelper.swift in Sources */,
+				1AA551A12124CF4700953CED /* KeyboardInsetsHandlerViewController.swift in Sources */,
 				1ADA5303211F007C0018D0D7 /* UIViewControllerStoryboardHelper.swift in Sources */,
 				1A0FD56221221D150005F4AC /* DemoItemsFactory.swift in Sources */,
 				1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */,
 				1A0FD568212230AB0005F4AC /* UIViewNibHelper.swift in Sources */,
+				1AA5519A2124C4A000953CED /* KeyboardNotificationInfo.swift in Sources */,
 				1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */,
 				1A0FD54C21206DE80005F4AC /* ViewStatePresenter.swift in Sources */,
 			);
@@ -426,12 +454,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -479,10 +507,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -497,8 +525,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -512,8 +538,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -526,15 +550,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 623KFYEN4J;
 				INFOPLIST_FILE = UIHelpersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIHelpers.app/UIHelpers";
 			};
 			name = Debug;
@@ -548,13 +568,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 623KFYEN4J;
 				INFOPLIST_FILE = UIHelpersTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIHelpers.app/UIHelpers";
 			};
 			name = Release;

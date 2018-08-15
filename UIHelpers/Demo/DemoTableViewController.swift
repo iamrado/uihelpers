@@ -21,6 +21,7 @@ class DemoTableViewController: UITableViewController {
         super.viewDidLoad()
         items = DemoItemsFactory.create(for: self)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifer)
+        navigationController?.isToolbarHidden = false
     }
 
     // MARK: - Table view data source

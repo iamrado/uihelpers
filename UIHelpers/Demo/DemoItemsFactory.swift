@@ -15,11 +15,18 @@ class DemoItemsFactory {
 
         let stateViewDemoTitle = "View State Presenter"
         let stateViewDemo = Item(title: stateViewDemoTitle) {
-            let stateViewDemoViewController = ViewStatePresenterViewController(nibName: nil, bundle: nil)
-            stateViewDemoViewController.title = stateViewDemoTitle
-            weakViewController?.navigationController?.pushViewController(stateViewDemoViewController, animated: true)
+            let viewController = ViewStatePresenterViewController(nibName: nil, bundle: nil)
+            viewController.title = stateViewDemoTitle
+            weakViewController?.navigationController?.pushViewController(viewController, animated: true)
         }
 
-        return [stateViewDemo]
+        let keybaordHandlerTitle = "Keyboard Handler"
+        let keyboardHandlerDemo = Item(title: keybaordHandlerTitle) {
+            let viewController = KeyboardInsetsHandlerViewController(nibName: nil, bundle: nil)
+            viewController.title = keybaordHandlerTitle
+            weakViewController?.navigationController?.pushViewController(viewController, animated: true)
+        }
+
+        return [stateViewDemo, keyboardHandlerDemo]
     }
 }
