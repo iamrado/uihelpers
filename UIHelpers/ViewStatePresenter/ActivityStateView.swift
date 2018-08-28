@@ -9,8 +9,8 @@
 import UIKit
 
 final class ActivityStateView: UIView, ViewStatePresentable {
-    @IBOutlet dynamic weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet dynamic weak var titleLabel: UILabel!
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var activityStackView: UIStackView!
 

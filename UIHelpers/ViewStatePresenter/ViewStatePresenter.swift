@@ -17,7 +17,7 @@ final class ViewStatePresenter {
         case error
     }
 
-    struct Info {
+    struct UserInfo {
         let title: String
         let subtitle: String?
         let img: UIImage?
@@ -29,20 +29,18 @@ final class ViewStatePresenter {
         let block: () -> Void
     }
 
-    var layoutStateView: ((StatePresentableView) -> Void)!
-    let rootView: UIView
+    let rootView: UIView?
 
     private(set) var presentedView: StatePresentableView?
     private(set) var state: State?
+    private(set) var viewStateClasses = [State: ViewStatePresentable.Type]()
+    private var layoutStateView: ((StatePresentableView) -> Void)!
 
-    private var viewStateClasses = [State: ViewStatePresentable.Type]()
-
-    init(rootView: UIView) {
+    /// Initializer
+    ///
+    /// - Parameter rootView: Default
+    init(rootView: UIView?) {
         self.rootView = rootView
-
-        layoutStateView = { (stateView) in
-            self.layout(stateView: stateView)
-        }
 
         State.allCases.forEach { (state) in
             switch state {
@@ -52,28 +50,61 @@ final class ViewStatePresenter {
                 self.register(viewClass: StateView.self, for: state)
             }
         }
+
+        setLayoutStateViewHandler(nil)
     }
 
-    func present(state: ViewStatePresenter.State?, info: ViewStatePresenter.Info?) {
+    /// Presents the particular state with desired info
+    ///
+    /// - Parameters:
+    ///   - state: A state to present.
+    ///   - userInfo: Holds the data for StatePresentable view. Use to customize the texts, image and button of ViewStatePresentable view.
+    func present(state: ViewStatePresenter.State?, userInfo: ViewStatePresenter.UserInfo?) {
         presentedView?.removeFromSuperview()
-        guard let state = state, let viewClass = viewStateClasses[state] else { return }
+        guard let state = state else { return }
+        guard let viewClass = viewStateClasses[state] else { preconditionFailure("Unexpectedly found nil view class for \(state)") }
 
         var view = viewClass.instantiate()
-        view.title = info?.title
-        view.subtitle = info?.subtitle
-        view.image = info?.img
-        view.buttonTitle = info?.action?.title
-        view.onButtonTapped = info?.action?.block
+        view.title = userInfo?.title
+        view.subtitle = userInfo?.subtitle
+        view.image = userInfo?.img
+        view.buttonTitle = userInfo?.action?.title
+        view.onButtonTapped = userInfo?.action?.block
 
+        self.state = state
         presentedView = view
         layoutStateView(view)
     }
 
+    /// Registers the state view class for particular state
+    ///
+    /// - Parameters:
+    ///   - viewClass: A view that will be registered for a given state.
+    ///   - state: A state.
     func register(viewClass: ViewStatePresentable.Type, for state: ViewStatePresenter.State) {
         viewStateClasses[state] = viewClass
     }
 
+    /// Sets the custom state view layout handler
+    ///
+    /// It's your responsibility to add state view as a subview and provide cpnstraints or frame.
+    ///
+    /// - Parameter handler: Custom state view layout handler
+    func setLayoutStateViewHandler(_ handler: ((StatePresentableView) -> Void)?) {
+        if let handler = handler {
+            layoutStateView = handler
+        } else {
+            layoutStateView = { [weak self] (stateView) in
+                self?.layout(stateView: stateView)
+            }
+        }
+    }
+
     private func layout(stateView: StatePresentableView) {
+        guard let rootView = rootView else {
+            preconditionFailure("Missing rootView! You have to either set the rootView or specify your custom layout handler.")
+        }
+
         stateView.translatesAutoresizingMaskIntoConstraints = false
         rootView.addSubview(stateView)
 

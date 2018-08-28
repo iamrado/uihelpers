@@ -32,29 +32,32 @@ class ViewStatePresenterViewController: UIViewController {
         let action = ViewStatePresenter.Action(title: "Retry") { [weak self] in
             self?.presentFetching()
         }
-        let info = ViewStatePresenter.Info(title: "Nothing to see :]", subtitle: "Nothing here right now. Come back later!", img: nil, action: action)
-        statePresenter.present(state: .empty, info: info)
+        let info = ViewStatePresenter.UserInfo(title: "Nothing to see :]",
+                                               subtitle: "Nothing here right now. Come back later!",
+                                               img: nil,
+                                               action: action)
+        statePresenter.present(state: .empty, userInfo: info)
     }
 
     private func presentFetching() {
         let action = ViewStatePresenter.Action(title: "Cancel", block: { [weak self] in
             self?.presentEmpty()
         })
-        let info = ViewStatePresenter.Info(title: "Fetching data... :|", subtitle: nil, img: nil, action: action)
-        statePresenter.present(state: .activity, info: info)
+        let info = ViewStatePresenter.UserInfo(title: "Fetching data... :|", subtitle: nil, img: nil, action: action)
+        statePresenter.present(state: .activity, userInfo: info)
     }
 
     private func presentActivity() {
-        let info = ViewStatePresenter.Info(title: "", subtitle: nil, img: nil, action: nil)
-        statePresenter.present(state: .activity, info: info)
+        let info = ViewStatePresenter.UserInfo(title: "", subtitle: nil, img: nil, action: nil)
+        statePresenter.present(state: .activity, userInfo: info)
     }
 
     private func presentError() {
         let action = ViewStatePresenter.Action(title: "Retry") { [weak self] in
             self?.presentFetching()
         }
-        let info = ViewStatePresenter.Info(title: "Ooooh no =!", subtitle: "Check your Internet Connection.", img: nil, action: action)
-        statePresenter.present(state: .error, info: info)
+        let info = ViewStatePresenter.UserInfo(title: "Ooooh no =!", subtitle: "Check your Internet Connection.", img: nil, action: action)
+        statePresenter.present(state: .error, userInfo: info)
     }
 
     private func set(state: State) {
