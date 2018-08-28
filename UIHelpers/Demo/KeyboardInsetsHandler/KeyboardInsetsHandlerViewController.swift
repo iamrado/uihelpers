@@ -61,6 +61,7 @@ extension KeyboardInsetsHandlerViewController: UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
+        cell.backgroundColor = .lightGray
         return cell
     }
 }
