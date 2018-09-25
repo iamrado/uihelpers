@@ -28,7 +28,7 @@ class KeyboardInsetsHandlerViewController: UIViewController {
 
         let frame = CGRect(origin: .zero, size: CGSize(width: tableView.frame.width, height: 44))
         let textField = UITextField(frame: frame)
-        textField.backgroundColor = UIColor.gray.withAlphaComponent(0.1)
+        textField.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         textField.textAlignment = .center
         textField.placeholder = "Try me!"
         tableView.tableHeaderView = textField
@@ -61,7 +61,7 @@ extension KeyboardInsetsHandlerViewController: UITableViewDataSource, UITableVie
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
-        cell.backgroundColor = .lightGray
+        cell.backgroundColor = #colorLiteral(red: 0.9709016681, green: 0.9638828635, blue: 0.9762752652, alpha: 1)
         return cell
     }
 }

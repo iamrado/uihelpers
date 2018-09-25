@@ -25,6 +25,7 @@ final class ActivityStateView: UIView, ViewStatePresentable {
             }
         }
     }
+
     var buttonTitle: String? {
         didSet {
             button.setTitle(buttonTitle, for: .normal)

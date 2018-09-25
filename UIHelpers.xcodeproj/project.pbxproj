@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A0B50952159375D00197325 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B50942159375D00197325 /* TableViewController.swift */; };
+		1A0B509A21593B5700197325 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B509921593B5700197325 /* CollectionViewController.swift */; };
+		1A0B509F2159424B00197325 /* TestTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0B509E2159424B00197325 /* TestTableViewController.swift */; };
 		1A0FD53F211F157D0005F4AC /* UIImageScaleHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD53E211F157D0005F4AC /* UIImageScaleHelperTests.swift */; };
 		1A0FD544211F324A0005F4AC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A0FD543211F324A0005F4AC /* AVFoundation.framework */; };
 		1A0FD546211F34C50005F4AC /* UIViewControllerHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0FD545211F34C50005F4AC /* UIViewControllerHelperTests.swift */; };
@@ -27,6 +30,8 @@
 		1A10A142205F9EB700B98FBA /* UIImageDrawHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A141205F9EB700B98FBA /* UIImageDrawHelper.swift */; };
 		1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A144205FAC3200B98FBA /* UIViewControllerHelper.swift */; };
 		1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A14C205FB6F900B98FBA /* UIImageScaleHelper.swift */; };
+		1A11B9AC2159933400BA2962 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11B9AB2159933400BA2962 /* TestCollectionViewController.swift */; };
+		1A20910B215A58140045B189 /* SelectionClearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20910A215A58140045B189 /* SelectionClearable.swift */; };
 		1AA5519A2124C4A000953CED /* KeyboardNotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */; };
 		1AA5519C2124C9BC00953CED /* KeyboardInsetsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */; };
 		1AA551A12124CF4700953CED /* KeyboardInsetsHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */; };
@@ -44,6 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A0B50942159375D00197325 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		1A0B509921593B5700197325 /* CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		1A0B509E2159424B00197325 /* TestTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTableViewController.swift; sourceTree = "<group>"; };
 		1A0FD53E211F157D0005F4AC /* UIImageScaleHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageScaleHelperTests.swift; sourceTree = "<group>"; };
 		1A0FD543211F324A0005F4AC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		1A0FD545211F34C50005F4AC /* UIViewControllerHelperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelperTests.swift; sourceTree = "<group>"; };
@@ -66,6 +74,8 @@
 		1A10A141205F9EB700B98FBA /* UIImageDrawHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageDrawHelper.swift; sourceTree = "<group>"; };
 		1A10A144205FAC3200B98FBA /* UIViewControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerHelper.swift; sourceTree = "<group>"; };
 		1A10A14C205FB6F900B98FBA /* UIImageScaleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageScaleHelper.swift; sourceTree = "<group>"; };
+		1A11B9AB2159933400BA2962 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
+		1A20910A215A58140045B189 /* SelectionClearable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionClearable.swift; sourceTree = "<group>"; };
 		1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationInfo.swift; sourceTree = "<group>"; };
 		1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInsetsHandler.swift; sourceTree = "<group>"; };
 		1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInsetsHandlerViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +103,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0B50932159373200197325 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				1A0B509921593B5700197325 /* CollectionViewController.swift */,
+				1A20910A215A58140045B189 /* SelectionClearable.swift */,
+				1A0B50942159375D00197325 /* TableViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		1A0B509D2159420800197325 /* TableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A0B509E2159424B00197325 /* TestTableViewController.swift */,
+			);
+			path = TableViewController;
+			sourceTree = "<group>";
+		};
 		1A0FD542211F324A0005F4AC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +162,8 @@
 		1A0FD55B21209B050005F4AC /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				1A11B9A821598FE500BA2962 /* CollectionViewController */,
+				1A0B509D2159420800197325 /* TableViewController */,
 				1AA5519F2124CF2300953CED /* KeyboardInsetsHandler */,
 				1A0FD56021221CBF0005F4AC /* ViewStatePresenter */,
 				1A0FD55E21221B8E0005F4AC /* DemoTableViewController.swift */,
@@ -180,6 +210,7 @@
 		1A10A12D205F9E3A00B98FBA /* UIHelpers */ = {
 			isa = PBXGroup;
 			children = (
+				1A0B50932159373200197325 /* ViewControllers */,
 				1A0FD55B21209B050005F4AC /* Demo */,
 				1A10A146205FB10000B98FBA /* Helpers */,
 				1A0FD54A21206DBD0005F4AC /* ViewStatePresenter */,
@@ -200,6 +231,14 @@
 				1ADA5301211EFDF50018D0D7 /* UIImage */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		1A11B9A821598FE500BA2962 /* CollectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				1A11B9AB2159933400BA2962 /* TestCollectionViewController.swift */,
+			);
+			path = CollectionViewController;
 			sourceTree = "<group>";
 		};
 		1AA551982124C48300953CED /* Keyboard */ = {
@@ -353,12 +392,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0B509A21593B5700197325 /* CollectionViewController.swift in Sources */,
 				1A0FD55D21209B210005F4AC /* ViewStatePresenterViewController.swift in Sources */,
 				1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */,
+				1A0B50952159375D00197325 /* TableViewController.swift in Sources */,
 				1A0FD54E21206FED0005F4AC /* ViewStatePresentable.swift in Sources */,
 				1A0FD55F21221B8E0005F4AC /* DemoTableViewController.swift in Sources */,
 				1A0FD550212079E80005F4AC /* StateView.swift in Sources */,
+				1A20910B215A58140045B189 /* SelectionClearable.swift in Sources */,
 				1A0FD5542120927E0005F4AC /* ActivityStateView.swift in Sources */,
+				1A11B9AC2159933400BA2962 /* TestCollectionViewController.swift in Sources */,
 				1AA5519C2124C9BC00953CED /* KeyboardInsetsHandler.swift in Sources */,
 				1A10A142205F9EB700B98FBA /* UIImageDrawHelper.swift in Sources */,
 				1AA551A12124CF4700953CED /* KeyboardInsetsHandlerViewController.swift in Sources */,
@@ -366,6 +409,7 @@
 				1A0FD56221221D150005F4AC /* DemoItemsFactory.swift in Sources */,
 				1A10A145205FAC3200B98FBA /* UIViewControllerHelper.swift in Sources */,
 				1A0FD568212230AB0005F4AC /* UIViewNibHelper.swift in Sources */,
+				1A0B509F2159424B00197325 /* TestTableViewController.swift in Sources */,
 				1AA5519A2124C4A000953CED /* KeyboardNotificationInfo.swift in Sources */,
 				1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */,
 				1A0FD54C21206DE80005F4AC /* ViewStatePresenter.swift in Sources */,
