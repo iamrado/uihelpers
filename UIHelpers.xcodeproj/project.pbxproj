@@ -210,10 +210,8 @@
 		1A10A12D205F9E3A00B98FBA /* UIHelpers */ = {
 			isa = PBXGroup;
 			children = (
-				1A0B50932159373200197325 /* ViewControllers */,
 				1A0FD55B21209B050005F4AC /* Demo */,
 				1A10A146205FB10000B98FBA /* Helpers */,
-				1A0FD54A21206DBD0005F4AC /* ViewStatePresenter */,
 				1A10A12E205F9E3B00B98FBA /* AppDelegate.swift */,
 				1A10A135205F9E3B00B98FBA /* Assets.xcassets */,
 				1A10A13A205F9E3B00B98FBA /* Info.plist */,
@@ -226,9 +224,11 @@
 			isa = PBXGroup;
 			children = (
 				1AA551982124C48300953CED /* Keyboard */,
+				1ADA5301211EFDF50018D0D7 /* UIImage */,
 				1A0FD5632122304D0005F4AC /* UIView */,
 				1ADA5302211EFE000018D0D7 /* UIViewController */,
-				1ADA5301211EFDF50018D0D7 /* UIImage */,
+				1A0B50932159373200197325 /* ViewControllers */,
+				1A0FD54A21206DBD0005F4AC /* ViewStatePresenter */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
