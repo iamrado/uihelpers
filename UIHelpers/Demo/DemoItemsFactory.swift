@@ -10,23 +10,21 @@ import UIKit
 
 class DemoItemsFactory {
     typealias Item = DemoTableViewController.Item
+
     static func create(for viewController: UIViewController) -> [Item] {
-        weak var weakViewController = viewController
-
-        let stateViewDemoTitle = "View State Presenter"
-        let stateViewDemo = Item(title: stateViewDemoTitle) {
-            let viewController = ViewStatePresenterViewController(nibName: nil, bundle: nil)
-            viewController.title = stateViewDemoTitle
-            weakViewController?.navigationController?.pushViewController(viewController, animated: true)
+        func item(title: String, viewController viewControllerClass: UIViewController.Type) -> Item {
+            return Item(title: title) { [weak viewController] in
+                let viewCntrl = viewControllerClass.init(nibName: nil, bundle: nil)
+                viewCntrl.title = title
+                viewController?.navigationController?.pushViewController(viewCntrl, animated: true)
+            }
         }
 
-        let keybaordHandlerTitle = "Keyboard Handler"
-        let keyboardHandlerDemo = Item(title: keybaordHandlerTitle) {
-            let viewController = KeyboardInsetsHandlerViewController(nibName: nil, bundle: nil)
-            viewController.title = keybaordHandlerTitle
-            weakViewController?.navigationController?.pushViewController(viewController, animated: true)
-        }
-
-        return [stateViewDemo, keyboardHandlerDemo]
+        let items = [item(title: "View State Presenter", viewController: ViewStatePresenterViewController.self),
+                     item(title: "Keyboard Handler", viewController: KeyboardInsetsHandlerViewController.self),
+                     item(title: "TableViewContorller", viewController: TestTableViewController.self),
+                     item(title: "CollectionViewContorller", viewController: TestCollectionViewController.self)]
+        return items
     }
+
 }
