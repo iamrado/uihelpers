@@ -32,6 +32,7 @@
 		1A10A14D205FB6F900B98FBA /* UIImageScaleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A10A14C205FB6F900B98FBA /* UIImageScaleHelper.swift */; };
 		1A11B9AC2159933400BA2962 /* TestCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11B9AB2159933400BA2962 /* TestCollectionViewController.swift */; };
 		1A20910B215A58140045B189 /* SelectionClearable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A20910A215A58140045B189 /* SelectionClearable.swift */; };
+		1A8770D221709C01008C885D /* UIButtonSolidColorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8770D121709C01008C885D /* UIButtonSolidColorHelper.swift */; };
 		1AA5519A2124C4A000953CED /* KeyboardNotificationInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */; };
 		1AA5519C2124C9BC00953CED /* KeyboardInsetsHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */; };
 		1AA551A12124CF4700953CED /* KeyboardInsetsHandlerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */; };
@@ -76,6 +77,7 @@
 		1A10A14C205FB6F900B98FBA /* UIImageScaleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageScaleHelper.swift; sourceTree = "<group>"; };
 		1A11B9AB2159933400BA2962 /* TestCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCollectionViewController.swift; sourceTree = "<group>"; };
 		1A20910A215A58140045B189 /* SelectionClearable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionClearable.swift; sourceTree = "<group>"; };
+		1A8770D121709C01008C885D /* UIButtonSolidColorHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonSolidColorHelper.swift; sourceTree = "<group>"; };
 		1AA551992124C4A000953CED /* KeyboardNotificationInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardNotificationInfo.swift; sourceTree = "<group>"; };
 		1AA5519B2124C9BC00953CED /* KeyboardInsetsHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInsetsHandler.swift; sourceTree = "<group>"; };
 		1AA551A02124CF4700953CED /* KeyboardInsetsHandlerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardInsetsHandlerViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 		1A10A146205FB10000B98FBA /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				1A8770D021709BD5008C885D /* UIButton */,
 				1AA551982124C48300953CED /* Keyboard */,
 				1ADA5301211EFDF50018D0D7 /* UIImage */,
 				1A0FD5632122304D0005F4AC /* UIView */,
@@ -239,6 +242,14 @@
 				1A11B9AB2159933400BA2962 /* TestCollectionViewController.swift */,
 			);
 			path = CollectionViewController;
+			sourceTree = "<group>";
+		};
+		1A8770D021709BD5008C885D /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				1A8770D121709C01008C885D /* UIButtonSolidColorHelper.swift */,
+			);
+			path = UIButton;
 			sourceTree = "<group>";
 		};
 		1AA551982124C48300953CED /* Keyboard */ = {
@@ -336,12 +347,12 @@
 				TargetAttributes = {
 					1A10A12A205F9E3A00B98FBA = {
 						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					1ADA531A211F15370018D0D7 = {
 						CreatedOnToolsVersion = 10.0;
-						LastSwiftMigration = 1000;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 1A10A12A205F9E3A00B98FBA;
 					};
@@ -395,6 +406,7 @@
 				1A0B509A21593B5700197325 /* CollectionViewController.swift in Sources */,
 				1A0FD55D21209B210005F4AC /* ViewStatePresenterViewController.swift in Sources */,
 				1A10A12F205F9E3B00B98FBA /* AppDelegate.swift in Sources */,
+				1A8770D221709C01008C885D /* UIButtonSolidColorHelper.swift in Sources */,
 				1A0B50952159375D00197325 /* TableViewController.swift in Sources */,
 				1A0FD54E21206FED0005F4AC /* ViewStatePresentable.swift in Sources */,
 				1A0FD55F21221B8E0005F4AC /* DemoTableViewController.swift in Sources */,
@@ -569,6 +581,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -582,6 +595,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpers;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -599,6 +613,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIHelpers.app/UIHelpers";
 			};
 			name = Debug;
@@ -616,6 +631,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.iamrado.UIHelpersTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UIHelpers.app/UIHelpers";
 			};
 			name = Release;

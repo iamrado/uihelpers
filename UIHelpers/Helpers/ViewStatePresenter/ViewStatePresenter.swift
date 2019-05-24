@@ -64,7 +64,7 @@ final class ViewStatePresenter {
         guard let state = state else { return }
         guard let viewClass = viewStateClasses[state] else { preconditionFailure("Unexpectedly found nil view class for \(state)") }
 
-        var view = viewClass.instantiate()
+        let view = viewClass.instantiate()
         view.title = userInfo?.title
         view.subtitle = userInfo?.subtitle
         view.image = userInfo?.img
